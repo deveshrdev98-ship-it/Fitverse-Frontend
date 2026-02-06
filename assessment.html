@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Assessment | FitVerse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>FitVerse</h1>
+</nav>
+
+<section class="section">
+  <h2>Smart Fitness Assessment</h2>
+  <p class="coming">Fill details to receive a coach-verified custom plan</p>
+
+  <form class="assessment-form" id="fitnessForm">
+
+    <h3>Basic Stats</h3>
+    <input type="number" placeholder="Age" required>
+    <input type="number" placeholder="Height (cm)" required>
+    <input type="number" placeholder="Weight (kg)" required>
+
+    <select required>
+      <option value="">Body Type</option>
+      <option>Ectomorph</option>
+      <option>Mesomorph</option>
+      <option>Endomorph</option>
+    </select>
+
+    <h3>Training Background</h3>
+    <select required>
+      <option value="">Experience Level</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
+
+    <select required>
+      <option value="">Primary Goal</option>
+      <option>Fat Loss</option>
+      <option>Hypertrophy</option>
+      <option>Strength</option>
+      <option>Hybrid</option>
+      <option>Cardio Health</option>
+    </select>
+
+    <h3>Health & Weakness</h3>
+    <textarea placeholder="Mention injuries, pain, weaknesses (if any)"></textarea>
+
+    <select>
+      <option value="">Diet Preference</option>
+      <option>Vegetarian</option>
+      <option>Non-Vegetarian</option>
+      <option>Vegan</option>
+    </select>
+
+    <select>
+      <option value="">Food Intolerance</option>
+      <option>None</option>
+      <option>Lactose Intolerant</option>
+      <option>Gluten Sensitive</option>
+    </select>
+
+    <h3>Lifestyle</h3>
+    <select>
+      <option>Activity Level</option>
+      <option>Sedentary</option>
+      <option>Moderately Active</option>
+      <option>Highly Active</option>
+    </select>
+
+ <button type="submit">Continue to Login</button>
+
+
+  </form>
+
+  <p id="resultMsg" class="coming"></p>
+</section>
+
+<footer>
+  <p>Coach verified plans • Doctor reviewed injuries • Coming soon</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

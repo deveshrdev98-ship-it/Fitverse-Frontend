@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard | FitVerse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>FitVerse</h1>
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Competitions</a></li>
+    <li><a href="#">Programs</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</nav>
+
+<section class="dashboard">
+
+  <h2>Dashboard</h2>
+
+  <!-- PROFILE CARD -->
+  <div class="card dashboard-card">
+    <h3>Profile Status</h3>
+    <p>Complete your profile to unlock competition preparation.</p>
+    <button>Complete Profile</button>
+  </div>
+
+  <!-- COMP PREP STATUS -->
+  <div class="card dashboard-card">
+    <h3>Competition Preparation</h3>
+    <p>No active competition preparation found.</p>
+    <button disabled class="disabled-btn">
+      Prepare for a Competition
+    </button>
+  </div>
+
+  <!-- PROGRAM STATUS -->
+  <div class="card dashboard-card">
+    <h3>Training Program</h3>
+    <p>No program created yet.</p>
+    <p class="coming">Programs are created after prep setup.</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 FitVerse</p>
+</footer>
+
+</body>
+</html>

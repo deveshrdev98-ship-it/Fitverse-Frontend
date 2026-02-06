@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | FitVerse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>FitVerse</h1>
+</nav>
+
+<section class="section">
+  <h2>Login to Continue</h2>
+
+  <form class="assessment-form" id="loginForm">
+
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+
+    <!-- ROLE SELECTION -->
+    <select id="role" required>
+      <option value="">Login as</option>
+      <option value="user">Athlete / User</option>
+      <option value="coach">Coach</option>
+    </select>
+
+    <button type="submit">Login</button>
+
+    <p class="coming">
+      Don’t have an account? Signup coming soon.
+    </p>
+
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

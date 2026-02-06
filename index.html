@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitVerse | Smart Fitness Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">FitVerse</h1>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#portals">Portals</a></li>
+    <li><a href="#plans">Plans</a></li>
+    <li><a href="#coaches">Coaches</a></li>
+  </ul>
+
+  <div id="authArea">
+    <a href="login.html" class="login-btn" id="loginBtn">Login / Sign Up</a>
+
+    <div class="profile-avatar" id="profileAvatar" style="display:none;">
+      <span id="avatarText">U</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Personalized Fitness. Real Guidance.</h2>
+    <p>Beginner · Intermediate · Advanced</p>
+
+    <a class="primary-btn protected" data-redirect="competitions.html">
+      Upcoming Competitions
+    </a>
+  </div>
+</section>
+
+<!-- LOGIN PORTALS -->
+<section id="portals" class="section">
+  <h2>Access Your Portal</h2>
+
+  <div class="portal-grid">
+    <div class="card protected" data-redirect="assessment.html">
+      <h3>User Portal</h3>
+      <p>Stats • Goals • Custom Programs</p>
+      <button>Start Assessment</button>
+    </div>
+
+    <div class="card protected" data-redirect="coach-login.html">
+      <h3>Coach Portal</h3>
+      <p>Clients • Programs • Progress</p>
+      <button>Coach Login</button>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING DOMAINS -->
+<section id="plans" class="section dark">
+  <h2>Training Domains</h2>
+  <div class="domain-grid">
+    <div class="domain">Hypertrophy</div>
+    <div class="domain">Fat Loss</div>
+    <div class="domain">Powerlifting</div>
+    <div class="domain">Street Lifting</div>
+    <div class="domain">Hybrid Training</div>
+    <div class="domain">Cardio Health</div>
+    <div class="domain">Hardgainer</div>
+    <div class="domain">Recomposition</div>
+  </div>
+</section>
+
+<!-- DIET & HEALTH -->
+<section class="section">
+  <h2>Diet & Health Support</h2>
+
+  <div class="portal-grid">
+    <div class="card protected" data-redirect="diet.html">
+      <h3>Diet Planning</h3>
+      <p>Veg • Non-Veg • Intolerances</p>
+    </div>
+
+    <div class="card protected" data-redirect="injury-care.html">
+      <h3>Injury Care</h3>
+      <p>Strains • Recovery • Rehab</p>
+    </div>
+
+    <div class="card protected" data-redirect="doctors.html">
+      <h3>Doctor Guidance</h3>
+      <p>Minor injuries support</p>
+    </div>
+  </div>
+</section>
+
+<!-- COACHES -->
+<section id="coaches" class="section dark">
+  <h2>Hire a Coach</h2>
+
+  <div class="portal-grid">
+    <div class="card protected" data-redirect="coaches.html">
+      <h3>Strength Coach</h3>
+      <p>Power & Performance</p>
+    </div>
+    <div class="card protected" data-redirect="coaches.html">
+      <h3>Physique Coach</h3>
+      <p>Aesthetics & Symmetry</p>
+    </div>
+    <div class="card protected" data-redirect="coaches.html">
+      <h3>Rehab Specialist</h3>
+      <p>Recovery Focused</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 FitVerse</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

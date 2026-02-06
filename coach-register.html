@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Coach Account | FitVerse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>FitVerse</h1>
+</nav>
+
+<section class="section">
+  <h2>Create Professional Account</h2>
+  <p class="coming">All accounts are manually verified</p>
+
+  <form class="assessment-form" id="coachRegisterForm">
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Phone Number" required>
+
+    <select required>
+      <option value="">Role</option>
+      <option>Fitness Coach</option>
+      <option>Strength Coach</option>
+      <option>Physiotherapist</option>
+      <option>Sports Doctor</option>
+    </select>
+
+    <input type="number" placeholder="Years of Experience" required>
+
+    <textarea placeholder="Short Professional Bio"></textarea>
+
+    <input type="password" placeholder="Create Password" required>
+
+    <button type="submit">Submit for Verification</button>
+
+  </form>
+
+  <p id="registerMsg" class="coming"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
