@@ -1,24 +1,36 @@
-// ===== AUTH STATE =====
+// ===============================
+// AUTH STATE
+// ===============================
 const auth = JSON.parse(localStorage.getItem("auth"));
 const loginBtn = document.getElementById("loginBtn");
 const avatar = document.getElementById("profileAvatar");
 const avatarText = document.getElementById("avatarText");
 
-// ===== NAVBAR STATE =====
+// ===============================
+// NAVBAR STATE (SHOW AVATAR)
+// ===============================
 if (auth && auth.loggedIn) {
-  loginBtn.style.display = "none";
-  avatar.style.display = "flex";
-  avatarText.textContent = auth.name?.charAt(0).toUpperCase() || "U";
+  if (loginBtn) loginBtn.style.display = "none";
+  if (avatar) avatar.style.display = "flex";
 
-  avatar.onclick = () => {
-    window.location.href =
-      auth.role === "coach"
-        ? "coach-dashboard.html"
-        : "coach-dashboard.html";
-  };
+  if (avatarText) {
+    avatarText.textContent =
+      auth.name?.charAt(0).toUpperCase() || "U";
+  }
+
+  if (avatar) {
+    avatar.onclick = () => {
+      window.location.href =
+        auth.role === "coach"
+          ? "coach-dashboard.html"
+          : "user-dashboard.html";
+    };
+  }
 }
 
-// ===== PROTECTED LINKS =====
+// ===============================
+// PROTECTED LINKS
+// ===============================
 document.querySelectorAll(".protected").forEach(item => {
   item.addEventListener("click", () => {
     const redirect = item.dataset.redirect;
@@ -32,31 +44,52 @@ document.querySelectorAll(".protected").forEach(item => {
   });
 });
 
-// ===== LOGIN FORM HANDLER =====
-document.getElementById("loginForm")?.addEventListener("submit", e => {
-  e.preventDefault();
+// ===============================
+// LOGIN FORM HANDLER
+// ===============================
+const loginForm = document.getElementById("loginForm");
 
-  const role = document.getElementById("role").value;
-  const name = document.getElementById("username")?.value || "User";
+if (loginForm) {
+  loginForm.addEventListener("submit", e => {
+    e.preventDefault();
 
-  if (!role) {
-    alert("Select role");
-    return;
-  }
+    const role = document.getElementById("role").value;
+    const name =
+      document.getElementById("username")?.value || "User";
 
-  localStorage.setItem(
-    "auth",
-    JSON.stringify({
-      loggedIn: true,
-      role,
-      name,
-      coachHired: false
-    })
-  );
+    if (!role) {
+      alert("Please select role");
+      return;
+    }
 
-  const redirect = localStorage.getItem("postLoginRedirect");
-  localStorage.removeItem("postLoginRedirect");
+    // Save Auth
+    localStorage.setItem(
+      "auth",
+      JSON.stringify({
+        loggedIn: true,
+        role: role,
+        name: name,
+        coachHired: false
+      })
+    );
 
-  window.location.href =
-    redirect || (role === "coach" ? "coach-dashboard.html" : "coach-dashboard.html");
-});
+    // Check if redirected from protected page
+    const redirect = localStorage.getItem("postLoginRedirect");
+    localStorage.removeItem("postLoginRedirect");
+
+    // Role Based Redirect
+    window.location.href =
+      redirect ||
+      (role === "coach"
+        ? "coach-dashboard.html"
+        : "user-dashboard.html");
+  });
+}
+
+// ===============================
+// LOGOUT FUNCTION (OPTIONAL)
+// ===============================
+function logout() {
+  localStorage.removeItem("auth");
+  window.location.href = "index.html";
+}
