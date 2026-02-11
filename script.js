@@ -14,7 +14,7 @@ if (auth && auth.loggedIn) {
     window.location.href =
       auth.role === "coach"
         ? "coach-dashboard.html"
-        : "dashboard.html";
+        : "coach-dashboard.html";
   };
 }
 
@@ -58,5 +58,5 @@ document.getElementById("loginForm")?.addEventListener("submit", e => {
   localStorage.removeItem("postLoginRedirect");
 
   window.location.href =
-    redirect || (role === "coach" ? "coach-dashboard.html" : "dashboard.html");
+    redirect || (role === "coach" ? "coach-dashboard.html" : "coach-dashboard.html");
 });
